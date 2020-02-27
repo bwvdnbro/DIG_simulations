@@ -80,4 +80,4 @@ TemperatureCalculator:
   epsilon convergence: 0.001 # (0.001)
   maximum number of iterations: 1000 # (1000)
   minimum number of iterations: 3 # (3)
-  minimum ionized temperature: 2000. K
+  minimum ionized temperature: 1000. K
