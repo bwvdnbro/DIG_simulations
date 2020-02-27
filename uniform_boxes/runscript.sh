@@ -18,5 +18,6 @@ PYTHONPATH=../ python3 create_parameter_files.py
 ls ub*.param | parallel -j $numparallel \
   $cmacionize --params {} --threads $numthread --task-based --no-initial-output
 
-# create the temperature plot
+# create the temperature plots
 python3 plot_temperatures.py
+python3 plot_bb_temperatures.py

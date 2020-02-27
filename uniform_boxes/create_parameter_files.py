@@ -15,3 +15,13 @@ for Z in Zs:
             params["AbundanceModel:metallicity"] = "{0}".format(met)
             params["DensityGridWriter:prefix"] = fname + "_"
             write_parameterfile.write_parameterfile(fname + ".param", params)
+
+temperatures = [5000.0, 12000.0, 20000.0, 40000.0, 100000.0]
+for T in temperatures:
+    for met in metallicities:
+        fname = "bb_T{0:.0f}_m{1:.2f}".format(T, -met)
+        params["PhotonSourceSpectrum:type"] = "Planck"
+        params["PhotonSourceSpectrum:temperature"] = "{0:.0f} K".format(T)
+        params["AbundanceModel:metallicity"] = "{0}".format(met)
+        params["DensityGridWriter:prefix"] = fname + "_"
+        write_parameterfile.write_parameterfile(fname + ".param", params)
