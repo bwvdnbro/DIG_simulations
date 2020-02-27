@@ -1,0 +1,83 @@
+# file written on 25/02/2020, 09:56:54.
+AbundanceModel:
+  metallicity: -3.31 # (default value)
+  type: SolarMetallicity # (SolarMetallicity)
+ContinuousPhotonSource:
+  type: None # (None)
+ContinuousPhotonSourceSpectrum:
+  frequency: 3.28847e+15 Hz # (3.28847e+15 Hz)
+  total flux: -1 m^-2 s^-1 # (-1 m^-2 s^-1)
+  type: Monochromatic # (Monochromatic)
+CrossSections:
+  type: Verner # (Verner)
+DensityFunction:
+  density: 1e+08 m^-3 # (1e+08 m^-3)
+  neutral fraction H: 1e-06 # (1e-06)
+  temperature: 8000 K # (8000 K)
+  type: Homogeneous # (Homogeneous)
+DensityGrid:
+  number of cells: [64, 64, 64] # ([64, 64, 64])
+DensityGridWriter:
+  padding: 3 # (3)
+  prefix: snapshot # (snapshot)
+  type: Gadget # (Gadget)
+DensityGridWriterFields:
+  Coordinates: 1 # (1)
+  CosmicRayFactor: 0 # (0)
+  NeutralFractionC+: 1 # (1)
+  NeutralFractionC++: 1 # (1)
+  NeutralFractionH: 1 # (1)
+  NeutralFractionHe: 1 # (1)
+  NeutralFractionN: 1 # (1)
+  NeutralFractionN+: 1 # (1)
+  NeutralFractionN++: 1 # (1)
+  NeutralFractionNe: 1 # (1)
+  NeutralFractionNe+: 1 # (1)
+  NeutralFractionO: 1 # (1)
+  NeutralFractionO+: 1 # (1)
+  NeutralFractionS+: 1 # (1)
+  NeutralFractionS++: 1 # (1)
+  NeutralFractionS+++: 1 # (1)
+  NumberDensity: 1 # (1)
+  Temperature: 1 # (1)
+DensitySubGridCreator:
+  number of subgrids: [8, 8, 8] # ([8, 8, 8])
+  periodicity: [false, false, false] # ([false, false, false])
+DiffuseReemissionHandler:
+  type: Physical # (default value)
+PhotonSourceDistribution:
+  luminosity: 1e+49 Hz # (1.e+49 Hz)
+  position: [0 m, 0 m, 0 m] # ([0 m, 0 m, 0 m])
+  type: SingleStar # (SingleStar)
+PhotonSourceSpectrum:
+  age in yr: 1e+06 # (default value)
+  metallicity: 0.02 # (default value)
+  type: Pegase3 # (Pegase3)
+RecombinationRates:
+  type: Verner # (Verner)
+SimulationBox:
+  anchor: [-5. pc, -5. pc, -5. pc]
+  periodicity: [false, false, false] # ([false, false, false])
+  sides: [3.086e+17 m, 3.086e+17 m, 3.086e+17 m] # ([3.086e+17 m, 3.086e+17 m, 3.086e+17 m])
+TaskBasedIonizationSimulation:
+  diffuse field: true # (true)
+  enable trackers: false # (false)
+  number of buffers: 50000 # (50000)
+  number of iterations: 20 # (20)
+  number of photons: 10000000 # (1e7)
+  number of tasks: 500000 # (500000)
+  output folder: . # (.)
+  queue size per thread: 10000 # (10000)
+  random seed: 42 # (42)
+  shared queue size: 100000 # (100000)
+  source copy level: 4 # (4)
+TemperatureCalculator:
+  PAH heating factor: 0 # (0)
+  cosmic ray heating factor: 0 # (0)
+  cosmic ray heating limit: 0.75 # (0.75)
+  cosmic ray heating scale length: 4.11466e+19 m # (4.11466e+19 m)
+  do temperature calculation: true # (true)
+  epsilon convergence: 0.001 # (0.001)
+  maximum number of iterations: 1000 # (1000)
+  minimum number of iterations: 3 # (3)
+  minimum ionized temperature: 2000. K
