@@ -73,7 +73,7 @@ for iZ in range(len(Zs)):
         transform=ax[iZ][4].transAxes,
     )
 
-ax[0][0].set_xlim(0., 4.)
-ax[0][0].set_xticks([1., 2., 3.])
+ax[0][0].set_xlim(0.0, 4.0)
+ax[0][0].set_xticks([1.0, 2.0, 3.0])
 fig.subplots_adjust(wspace=0, hspace=0)
 pl.savefig("temperatures.png", dpi=300, bbox_inches="tight")

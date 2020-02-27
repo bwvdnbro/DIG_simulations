@@ -1,0 +1,95 @@
+AbundanceModel:
+  type: SolarMetallicity
+  metallicity: -3.31
+ContinuousPhotonSource:
+  type: ExtendedDisc # (None)
+  scale height: 1.94418e+18 m
+  luminosity: 8.124373119e46 s^-1
+ContinuousPhotonSourceSpectrum:
+  type: Pegase3 # (None)
+  age in yr: 1.e10
+  metallicity: 0.004
+CrossSections:
+  type: Verner # (Verner)
+DensityFunction:
+  filename: reference_400.hdf5 # (reference_400.hdf5)
+  initial neutral fraction: 1e-06 # (1e-06)
+  type: CMacIonizeSnapshot # (CMacIonizeSnapshot)
+  use density: false # (false)
+  use pressure: false # (false)
+DensityGrid:
+  number of cells: [64, 64, 512] # ([64, 64, 512])
+DensityGridWriter:
+  padding: 3 # (3)
+  prefix: template_ # (RHD_DIG_)
+  type: Gadget # (Gadget)
+DensityGridWriterFields:
+  Coordinates: 1 # (1)
+  CosmicRayFactor: 0 # (0)
+  NeutralFractionC+: 1 # (1)
+  NeutralFractionC++: 1 # (1)
+  NeutralFractionH: 1 # (1)
+  NeutralFractionHe: 1 # (1)
+  NeutralFractionN: 1 # (1)
+  NeutralFractionN+: 1 # (1)
+  NeutralFractionN++: 1 # (1)
+  NeutralFractionNe: 1 # (1)
+  NeutralFractionNe+: 1 # (1)
+  NeutralFractionO: 1 # (1)
+  NeutralFractionO+: 1 # (1)
+  NeutralFractionS+: 1 # (1)
+  NeutralFractionS++: 1 # (1)
+  NeutralFractionS+++: 1 # (1)
+  NumberDensity: 1 # (1)
+  Temperature: 1 # (1)
+DensitySubGridCreator:
+  number of subgrids: [8, 8, 8] # ([8, 8, 8])
+  periodicity: [true, true, false] # ([true, true, false])
+DiffuseReemissionHandler:
+  type: Physical # (Physical)
+PhotonSourceDistribution:
+  anchor x: -1.543e+19 m # (-1.543e+19 m)
+  anchor y: -1.543e+19 m # (-1.543e+19 m)
+  average number of sources: 24 # (24)
+  origin z: 0 m # (0 m)
+  output sources: true # (true)
+  random seed: 42 # (42)
+  scaleheight z: 1.94418e+18 m
+  sides x: 3.086e+19 m # (3.086e+19 m)
+  sides y: 3.086e+19 m # (3.086e+19 m)
+  source lifetime: 6.308e+14 s # (6.308e+14 s)
+  source luminosity: 1e+48 Hz # (1e+48 Hz)
+  starting time: 2.5232e+16 s # (2.5232e+16 s)
+  type: DiscPatch # (DiscPatch)
+  update interval: 3.154e+13 s # (3.154e+13 s)
+PhotonSourceSpectrum:
+  type: Pegase3 # (WMBasic)
+  age in yr: 2.e6
+  metallicity: 0.02
+RecombinationRates:
+  type: Verner # (Verner)
+SimulationBox:
+  anchor: [-1.543e+19 m, -1.543e+19 m, -1.2344e+20 m] # ([-1.543e+19 m, -1.543e+19 m, -1.2344e+20 m])
+  periodicity: [true, true, false] # ([true, true, false])
+  sides: [3.086e+19 m, 3.086e+19 m, 2.4688e+20 m] # ([3.086e+19 m, 3.086e+19 m, 2.4688e+20 m])
+TaskBasedIonizationSimulation:
+  diffuse field: true # (true)
+  enable trackers: false # (false)
+  number of buffers: 50000 # (50000)
+  number of iterations: 20 # (20)
+  number of photons: 2e7 # (1000000)
+  number of tasks: 5000000 # (500000)
+  output folder: . # (.)
+  queue size per thread: 10000 # (10000)
+  random seed: 42 # (42)
+  shared queue size: 2000000 # (100000)
+  source copy level: 4 # (4)
+TemperatureCalculator:
+  PAH heating factor: 0 # (0)
+  cosmic ray heating factor: 0 # (0)
+  cosmic ray heating limit: 0.75 # (0.75)
+  cosmic ray heating scale length: 4.11466e+19 m # (4.11466e+19 m)
+  do temperature calculation: true # (true)
+  epsilon convergence: 0.001 # (0.001)
+  maximum number of iterations: 100 # (100)
+  minimum number of iterations: 3 # (3)
