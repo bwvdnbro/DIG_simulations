@@ -15,8 +15,12 @@ numthread=$3
 PYTHONPATH=../ python3 create_parameter_files.py
 
 # run the simulations, in parallel
-ls ub*.param | parallel -j $numparallel \
+ls ?b*.param | parallel -j $numparallel \
   $cmacionize --params {} --threads $numthread --task-based --no-initial-output
+
+# run the line emission simulations, in parallel
+ls ?b*_020.hdf5 | parallel -j $numparallel \
+  $cmacionize --params emission.param --file {} --emission --threads $numthread
 
 # create the temperature plots
 python3 plot_temperatures.py
