@@ -10,7 +10,7 @@ import matplotlib.ticker as ticker
 pl.rcParams["text.usetex"] = True
 pc = 3.086e16
 
-Zs = [0.0001, 0.004, 0.02, 0.1]
+Zs = [0.0001, 0.004, 0.02, 0.05]
 ages = [1.0e6, 1.0e7, 1.0e8, 1.0e9, 1.0e10]
 OHs = [-4.0, -3.31, -3.0]
 
