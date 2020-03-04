@@ -25,3 +25,6 @@ ls ?b*_020.hdf5 | parallel -j $numparallel \
 # create the temperature plots
 python3 plot_temperatures.py
 python3 plot_bb_temperatures.py
+
+# create the line plots
+python3 plot_lines.py
