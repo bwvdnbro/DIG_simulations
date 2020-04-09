@@ -28,3 +28,6 @@ python3 plot_bb_temperatures.py
 
 # create the line plots
 python3 plot_lines.py
+
+# create the Hbeta plot
+python3 plot_Hbeta.py
